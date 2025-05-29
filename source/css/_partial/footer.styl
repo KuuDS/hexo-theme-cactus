@@ -1,60 +1,96 @@
-#footer
-  position: absolute
-  bottom: 0
-  margin-bottom: 10px
-  width: 100%
-  color: $color-meta
-  vertical-align: top
-  text-align: center
-  font-size: 12px
+#footer {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 10px;
+  width: 100%;
+  color: var(--color-meta);
+  vertical-align: top;
+  text-align: center;
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
-  ul
-    margin: 0
-    padding: 0
-    list-style: none
+#footer .footer-up {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
 
-  li
-    display: inline-block
-    margin-right: 15px
-    border-right: 1px solid
-    border-color: $color-border
-    vertical-align: middle
+#footer .footer-up.has-sides {
+  justify-content: space-between;
+}
 
-    a
-      margin-right: 15px
+#footer .footer-down {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
 
-  li:last-child
-    margin-right: 0
-    border-right: 0
+#footer .footer-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-    a
-      margin-right: 0
+#footer ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
 
-  a
-    color: $color-meta
-    text-decoration: underline
-    background-image: none
+#footer li {
+  display: inline-block;
+  margin-right: 15px;
+  border-right: 1px solid;
+  border-color: var(--color-border);
+  vertical-align: middle;
+}
 
-  a:hover
-    color: lighten($color-meta, 20%)
+#footer li a {
+  margin-right: 15px;
+}
 
-  .footer-left
-    height: 20px
-    vertical-align: middle
-    line-height: 20px
+#footer li:last-child {
+  margin-right: 0;
+  border-right: 0;
+}
 
-@media (min-width: 39rem)
-  #footer
-    display: flex
-    flex-flow: row wrap
-    justify-content: space-between
-    align-items: center
-    align-content: center
-    margin-bottom: 20px
+#footer li:last-child a {
+  margin-right: 0;
+}
 
-    .footer-left
-      align-self: flex-start
-      margin-right: 20px
+#footer a {
+  color: var(--color-meta);
+  text-decoration: underline;
+  background-image: none;
+}
 
-    .footer-right
-      align-self: flex-end
+#footer a:hover {
+  color: var(--color-meta-hover);
+}
+
+#footer .footer-left {
+  height: 20px;
+  vertical-align: middle;
+  line-height: 20px;
+}
+
+#footer .footer-right {
+  height: 20px;
+  vertical-align: middle;
+  line-height: 20px;
+}
+
+@media (min-width: 39rem) {
+  #footer {
+    margin-bottom: 20px;
+  }
+
+  #footer .footer-left {
+    margin-right: 20px;
+  }
+}
